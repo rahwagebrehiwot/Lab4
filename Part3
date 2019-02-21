@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bridges chart </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+</head>
+<body>
+
+    <h1> Longest Bridges Chart</h1>
+    <canvas id="bridge-chart">
+    </canvas>
+<script>
+    var canvas = document.getElementById('bridge-chart')
+console.log(canvas)
+var ctx = canvas.getContext('2d')
+
+chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Verrazano-Narrows Bridge", "Golden Gate Bridge", "Mackinac Bridge", "George Washington Bridge","Tacoma Narrows Bridge"],
+        datasets: [{
+            label: 'Bridge names and span lengths',
+            data: [1298.4, 1280.2, 1158.0, 1067.0, 853.44],
+            backgroundColor: ['red', 'blue', 'yellow', 'green','black']
+        }]
+    }, options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: false
+                }
+            }]
+        }
+    }
+})
+
+
+
+</script>
+</body>
+</html>
